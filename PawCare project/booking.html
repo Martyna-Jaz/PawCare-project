@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Send Paw Care a dog-care booking request.">
+    <title>Book a Session | Paw Care</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <header>
+        <a class="logo-container" href="index.html" aria-label="Paw Care home">
+            <img src="Paw-Care-logo.webp" alt="" class="logo" width="45" height="45">
+            <span>Paw Care</span>
+        </a>
+        <nav aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+            <button class="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false">
+                <span class="theme-toggle__icon" aria-hidden="true">🌙</span>
+                <span class="theme-toggle__text">Dark mode</span>
+            </button>
+            <a href="booking.html" class="nav-btn" aria-current="page">Book Now</a>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <section class="page-hero">
+            <p class="eyebrow">A few details and we’ll be in touch</p>
+            <h1>Request a session</h1>
+            <p>Choose a service and tell us how to reach you. This demo creates a CSV file with your request; it does not send data to a server.</p>
+        </section>
+
+        <section class="booking-section" aria-labelledby="booking-heading">
+            <form id="booking-form" class="booking-form">
+                <h2 id="booking-heading">Your booking details</h2>
+                <div class="form-field">
+                    <label for="owner-name">Your name <span aria-hidden="true">*</span></label>
+                    <input id="owner-name" name="owner_name" autocomplete="name" required>
+                </div>
+                <div class="form-field">
+                    <label for="email">Email address <span aria-hidden="true">*</span></label>
+                    <input id="email" name="email" type="email" autocomplete="email" required>
+                </div>
+                <div class="form-field">
+                    <label for="dog-name">Dog's name <span aria-hidden="true">*</span></label>
+                    <input id="dog-name" name="dog_name" required>
+                </div>
+                <div class="form-field">
+                    <label for="service">Service <span aria-hidden="true">*</span></label>
+                    <select id="service" name="service" required>
+                        <option value="">Choose a service</option>
+                        <option value="Washing and cleaning">Washing and cleaning</option>
+                        <option value="Dog walking">Dog walking</option>
+                        <option value="Playtime and entertainment">Playtime and entertainment</option>
+                    </select>
+                </div>
+                <div class="form-field">
+                    <label for="preferred-date">Preferred date <span aria-hidden="true">*</span></label>
+                    <input id="preferred-date" name="preferred_date" type="date" required>
+                </div>
+                <div class="form-field">
+                    <label for="notes">Anything we should know? <span class="field-optional">(optional)</span></label>
+                    <textarea id="notes" name="notes" rows="4"></textarea>
+                </div>
+                <button class="cta-button form-submit" type="submit">Create booking CSV</button>
+                <p class="form-help">Use fictional details for a class review. Your browser will download the CSV when you submit.</p>
+                <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Paw Care. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+    <script src="booking.js"></script>
+</body>
+</html>
